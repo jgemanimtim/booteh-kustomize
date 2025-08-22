@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: booteh
+  name: booteh
+  namespace: dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: booteh
+  template:
+    metadata:
+      labels:
+        app: booteh
+    spec:
+      containers:
+      - name: booteh
+        image: jgemanimtim/booteh
+
